@@ -119,7 +119,7 @@ export default async function HomePage() {
       <section className="section-padding bg-navy-50">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-navy-900 mb-3">Editor&apos;s Top Picks</h2>
+            <h2 className="font-serif text-3xl font-bold text-navy-900 mb-3">Editor&#39;s Top Picks</h2>
             <p className="text-navy-600">Our highest-rated lumbar cushions for every budget and use case.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
