@@ -100,7 +100,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-10">
             <h2 className="font-serif text-3xl font-bold text-navy-900 mb-3">Where Do You Need Support?</h2>
-            <p className="text-navy-600 max-w-xl mx-auto">Different situations demand different features. Here's what to look for in each use case.</p>
+            <p className="text-navy-600 max-w-xl mx-auto">Different situations demand different features. Here&apos;s what to look for in each use case.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((u) => (
