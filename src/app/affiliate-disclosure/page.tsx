@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "Affiliate Disclosure | LumbarCushion", alternates: { canonical: "https://lumbarcushion.com/affiliate-disclosure" } };
+export default function AffiliatePage() {
+  return <section className="section-padding"><div className="container-custom max-w-3xl"><h1 className="font-serif text-4xl font-bold text-navy-900 mb-8">Affiliate Disclosure</h1><div className="prose"><p><strong>Last updated: January 2026</strong></p><p>LumbarCushion.com participates in the Amazon Associates program and AWIN affiliate network. We earn commissions from qualifying purchases made through our links at no extra cost to you.</p><h2>How This Affects Our Reviews</h2><p>It doesn&apos;t. Our rankings are based purely on product performance, support quality, and value. Brands cannot pay to improve their ranking or be featured.</p><h2>FTC Compliance</h2><p>Per FTC guidelines, our affiliate relationship is disclosed in the footer of every page and at the top of every review page.</p><p>Questions? <a href="/contact">Contact us</a>.</p></div></div></section>;
+}
