@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: { canonical: "https://lumbarcushion.com" },
   verification: { google: "wWxUJKO7_5badfwWP3Zw7M3MK_NrT5ycEgwAbOeCnqc" },
-  other: { "google-adsense-account": "ca-pub-3024315445700130" },
+  other: { "google-adsense-account": "ca-pub-3024315445700130", "msvalidate.01": "5028DCB359F381EE68A4F38EA824ED4C" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
