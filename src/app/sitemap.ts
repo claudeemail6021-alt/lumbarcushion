@@ -30,6 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "lumbar-support-vs-back-brace",
       "physical-therapist-recommended-lumbar-support",
     ].map(slug => ({ url: `${base}/blog/${slug}`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 })),
-    { url: `${baseUrl}/methodology`, priority: 0.5, changeFrequency: "monthly" as const },
+    { url: `${base}/methodology`, priority: 0.5, changeFrequency: "monthly" as const },
 ];
 }
