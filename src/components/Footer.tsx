@@ -48,6 +48,17 @@ export default function Footer() {
           <p className="text-xs text-navy-500 flex items-center gap-1">Made with <Heart className="h-3 w-3 text-teal-500" /> for pain-free sitting</p>
         </div>
       </div>
+
+          {/* Related Sites */}
+          <div>
+            <h3 className="font-semibold text-slate-900 mb-3 text-sm">Related Resources</h3>
+            <ul className="space-y-2 text-sm">
+              <li><a href="https://sciaticacushions.com" target="_blank" rel="noopener" className="text-slate-500 hover:text-indigo-600 transition-colors">SciaticaCushions.com — Sciatica Product Reviews</a></li>
+              <li><a href="https://gelcushions.com" target="_blank" rel="noopener" className="text-slate-500 hover:text-indigo-600 transition-colors">GelCushions.com — Gel Seat & Knee Cushion Reviews</a></li>
+              <li><a href="/methodology" className="text-slate-500 hover:text-indigo-600 transition-colors">Our Review Methodology</a></li>
+              <li><a href="/affiliate-disclosure" className="text-slate-500 hover:text-indigo-600 transition-colors">Affiliate Disclosure</a></li>
+            </ul>
+          </div>
     </footer>
   );
 }
