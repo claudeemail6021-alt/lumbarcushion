@@ -34,6 +34,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: { "@type": "Organization", name: "LumbarCushion", url: "https://lumbarcushion.com" },
     url: `https://lumbarcushion.com/blog/${slug}`,
   };
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.description,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Organization",
+      "name": post.author || "LumbarCushion Editorial Team",
+      "url": "https://lumbarcushion.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LumbarCushion.com",
+      "url": "https://lumbarcushion.com",
+      "logo": { "@type": "ImageObject", "url": "https://lumbarcushion.com/og-default.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://lumbarcushion.com/blog/${params.slug}` }
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
@@ -57,7 +79,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <span className="flex items-center gap-1"><Calendar className="h-4 w-4"/>{formatDate(post.frontmatter.date)}</span>
             <span className="flex items-center gap-1"><Clock className="h-4 w-4"/>{post.frontmatter.readTime}</span>
           </div>
-          <article className="prose"><MDXRemote source={post.content} /></article>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <article className="prose"><MDXRemote source={post.content} /></article>
           <div className="mt-12 pt-8 border-t border-navy-100">
             <Link href="/blog" className="text-teal-600 font-semibold hover:text-teal-700">← Back to all articles</Link>
           </div>
