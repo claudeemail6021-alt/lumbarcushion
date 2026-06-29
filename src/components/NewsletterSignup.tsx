@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export function NewsletterSignup() {
+export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -25,7 +25,7 @@ export function NewsletterSignup() {
       {status === "success" ? (
         <div className="text-center py-4">
           <div className="text-4xl mb-2">✅</div>
-          <p className="font-bold text-slate-900 text-lg">You're in!</p>
+          <p className="font-bold text-slate-900 text-lg">You&apos;re in!</p>
           <p className="text-sm text-slate-600 mt-1">Check your inbox for your free lumbar support guide.</p>
         </div>
       ) : (
