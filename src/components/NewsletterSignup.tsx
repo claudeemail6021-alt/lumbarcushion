@@ -1,19 +1,59 @@
 "use client";
 import { useState } from "react";
-export default function NewsletterSignup() {
+
+export function NewsletterSignup() {
   const [email, setEmail] = useState("");
-  const [done, setDone] = useState(false);
-  const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); setDone(true); };
-  if (done) return <div className="text-center py-4"><p className="text-navy-700 font-semibold">You&apos;re on the list! We&apos;ll send you our best back-care tips.</p></div>;
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("loading");
+    try {
+      const BREVO_ACTION = "https://54b3b228.sibforms.com/serve/MUIFAC5l3teXKGXgyYqPGIqNxIicgm-HJZostOSSVxydQktRhYP4ZZRtaqY8WtLXN2mjW8po9XjbcetOLw34_wE1sGC3YdmVTPeS61FJ0Ep1yi_lrsSRZd8_W6w6ePJjHyHrRufXiQjgGv9MIF33Clenj-bYX0HOynWpwOSfMQeSw1N3upSTTGIS9E47ravKsO6aq3ZSOfPXCOFhpg==";
+      const formData = new FormData();
+      formData.append("EMAIL", email);
+      formData.append("locale", "en");
+      await fetch(BREVO_ACTION, { method: "POST", mode: "no-cors", body: formData });
+    } catch {}
+    setStatus("success");
+    setEmail("");
+  };
+
   return (
-    <div className="text-center">
-      <h2 className="font-serif text-2xl font-bold text-navy-900 mb-2">Get Pain Relief Tips</h2>
-      <p className="text-navy-600 mb-6 text-sm">Expert guides on back health, ergonomics, and the latest cushion reviews — delivered free.</p>
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="your@email.com" className="flex-1 px-4 py-2.5 rounded-full border border-navy-200 focus:outline-none focus:ring-2 focus:ring-teal-300 text-sm"/>
-        <button type="submit" className="px-6 py-2.5 bg-navy-700 text-white font-semibold rounded-full hover:bg-navy-800 transition-colors text-sm">Subscribe Free</button>
-      </form>
-      <p className="text-xs text-navy-400 mt-3">No spam, ever. Unsubscribe anytime.</p>
+    <div className="bg-gradient-to-br from-indigo-50 to-slate-50 border border-indigo-100 rounded-2xl p-6 sm:p-8">
+      {status === "success" ? (
+        <div className="text-center py-4">
+          <div className="text-4xl mb-2">✅</div>
+          <p className="font-bold text-slate-900 text-lg">You're in!</p>
+          <p className="text-sm text-slate-600 mt-1">Check your inbox for your free lumbar support guide.</p>
+        </div>
+      ) : (
+        <>
+          <h3 className="text-xl font-bold text-slate-900 mb-1">Free Lumbar Support Guide</h3>
+          <p className="text-sm text-slate-600 mb-4">
+            Get our PT-approved guide to <strong>positioning lumbar support correctly</strong> — the mistake most people make that makes back pain worse, not better.
+          </p>
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your@email.com"
+              className="flex-1 border border-slate-300 rounded-lg px-4 py-3 text-base focus:ring-2 focus:ring-indigo-400 outline-none"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors whitespace-nowrap disabled:opacity-60"
+            >
+              {status === "loading" ? "Sending…" : "Get Free Guide →"}
+            </button>
+          </form>
+          <p className="text-xs text-slate-400 mt-2">No spam. Unsubscribe anytime.</p>
+        </>
+      )}
     </div>
   );
 }
