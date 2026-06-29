@@ -19,6 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.frontmatter.title,
     description: post.frontmatter.description,
     alternates: { canonical: `https://lumbarcushion.com/blog/${slug}` },
+    openGraph: {
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      type: "article",
+      publishedTime: post.frontmatter.date,
+    },
   };
 }
 
@@ -26,34 +32,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = await getBlogPost(slug);
   if (!post) notFound();
-  const articleJsonLd = {
-    "@context": "https://schema.org", "@type": "Article",
-    headline: post.frontmatter.title, description: post.frontmatter.description,
-    datePublished: post.frontmatter.date,
-    author: { "@type": "Person", name: post.frontmatter.author },
-    publisher: { "@type": "Organization", name: "LumbarCushion", url: "https://lumbarcushion.com" },
-    url: `https://lumbarcushion.com/blog/${slug}`,
-  };
 
-  const articleSchema = {
+  const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": post.title,
-    "description": post.description,
-    "datePublished": post.date,
-    "dateModified": post.date,
-    "author": {
+    headline: post.frontmatter.title,
+    description: post.frontmatter.description,
+    datePublished: post.frontmatter.date,
+    dateModified: post.frontmatter.date,
+    author: {
       "@type": "Organization",
-      "name": post.author || "LumbarCushion Editorial Team",
-      "url": "https://lumbarcushion.com/about"
+      name: post.frontmatter.author || "LumbarCushion Editorial Team",
+      url: "https://lumbarcushion.com/about",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "LumbarCushion.com",
-      "url": "https://lumbarcushion.com",
-      "logo": { "@type": "ImageObject", "url": "https://lumbarcushion.com/og-default.png" }
+      name: "LumbarCushion.com",
+      url: "https://lumbarcushion.com",
+      logo: { "@type": "ImageObject", url: "https://lumbarcushion.com/og-default.png" },
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://lumbarcushion.com/blog/${params.slug}` }
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://lumbarcushion.com/blog/${slug}`,
+    },
   };
 
   return (
@@ -72,15 +73,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
       <section className="section-padding">
         <div className="container-custom max-w-3xl">
-          <div className="mb-2"><span className="text-xs uppercase tracking-wider font-semibold text-teal-600">{post.frontmatter.category}</span></div>
+          <div className="mb-2">
+            <span className="text-xs uppercase tracking-wider font-semibold text-teal-600">{post.frontmatter.category}</span>
+          </div>
           <h1 className="font-serif text-3xl md:text-4xl font-bold text-navy-900 leading-tight mb-4">{post.frontmatter.title}</h1>
           <div className="flex flex-wrap items-center gap-4 text-sm text-navy-500 mb-8 pb-8 border-b border-navy-100">
             <span className="flex items-center gap-1"><User className="h-4 w-4"/>{post.frontmatter.author}</span>
             <span className="flex items-center gap-1"><Calendar className="h-4 w-4"/>{formatDate(post.frontmatter.date)}</span>
             <span className="flex items-center gap-1"><Clock className="h-4 w-4"/>{post.frontmatter.readTime}</span>
           </div>
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <article className="prose"><MDXRemote source={post.content} /></article>
+          <article className="prose">
+            <MDXRemote source={post.content} />
+          </article>
           <div className="mt-12 pt-8 border-t border-navy-100">
             <Link href="/blog" className="text-teal-600 font-semibold hover:text-teal-700">← Back to all articles</Link>
           </div>
