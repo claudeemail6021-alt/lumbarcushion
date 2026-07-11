@@ -84,6 +84,76 @@ export default function Top10Page() {
           </div>
         </div>
       </section>
+
+      {/* Buying Guide */}
+      <section className="section-padding bg-navy-50">
+        <div className="container-custom max-w-4xl">
+          <h2 className="font-serif text-3xl font-bold text-navy-900 mb-8 text-center">
+            How to Choose the Right Lumbar Cushion
+          </h2>
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl p-6 border border-navy-100">
+              <h3 className="font-bold text-navy-900 text-lg mb-3">1. Match Firmness to Your Pain Level</h3>
+              <p className="text-navy-700 leading-relaxed">
+                Firmness is the most important variable and the most commonly misjudged. Softer cushions feel comfortable initially but can bottom out under sustained weight, providing no actual lumbar support after an hour. Firmer cushions provide better structural support but can create pressure points for people with acute pain sensitivity. As a rule: if your pain is mild to moderate and you need all-day support, medium-firm is optimal. If you have significant acute pain, start softer and work toward firmer as symptoms settle.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-navy-100">
+              <h3 className="font-bold text-navy-900 text-lg mb-3">2. Consider Your Primary Seating Environment</h3>
+              <p className="text-navy-700 leading-relaxed">
+                Not all lumbar cushions work equally across environments. Office chairs typically have flat or slightly curved backs — standard cushions work well. Car seats have pronounced lateral bolsters and headrest structures that require car-specific strap routing. Gaming chairs have high backs that suit taller cushions. Travel contexts require compact, lightweight designs or inflatable options. Buying an office cushion for your car (or vice versa) is the most common mismatch — the strap geometry simply won't work correctly.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-navy-100">
+              <h3 className="font-bold text-navy-900 text-lg mb-3">3. Foam Density Determines Durability</h3>
+              <p className="text-navy-700 leading-relaxed">
+                Foam density (measured in pounds per cubic foot) is the single best predictor of how long a cushion will maintain its support. Low-density foam (under 2 lbs/ft³) will compress permanently within weeks of daily use. High-density foam (3.5–4.5 lbs/ft³) can last 3–5 years. This specification is rarely front-and-center in marketing materials — you often have to dig into the product specs or look at long-term durability reviews (90+ days of verified use). If a product doesn't disclose foam density, treat it as a yellow flag.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-navy-100">
+              <h3 className="font-bold text-navy-900 text-lg mb-3">4. Strap System Quality Matters More Than You Think</h3>
+              <p className="text-navy-700 leading-relaxed">
+                A lumbar cushion that slides out of position every 20 minutes provides no consistent benefit. The strap system determines whether the cushion actually stays at the L4–L5 region where it's most effective. Single elastic straps work on most fabric chairs but tend to slip on smooth leather or PU surfaces. Dual-strap systems (two straps rather than one) provide significantly better stability, particularly for leather gaming chairs and car seats. Velcro attachments add grip but can damage delicate upholstery over time.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-navy-100">
+              <h3 className="font-bold text-navy-900 text-lg mb-3">5. Positioning: Most People Place It Too High</h3>
+              <p className="text-navy-700 leading-relaxed">
+                The lumbar curve you&apos;re supporting sits at approximately belt-line height — L4–L5 — not mid-back. The most common mistake is placing the cushion too high (at the mid-back) because it feels intuitively comfortable, when in fact it&apos;s compressing the thoracic spine rather than supporting the lumbar curve. The widest part of the cushion should contact your back just above your belt line, pressing gently inward to fill the natural gap between your lower back and the chair. If you feel it in your shoulder blades, it&apos;s too high.
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 bg-white rounded-2xl p-6 border border-teal-100">
+            <h3 className="font-bold text-navy-900 text-lg mb-3">Our Recommendation Framework</h3>
+            <ul className="space-y-2 text-navy-700">
+              <li className="flex items-start gap-2"><span className="text-teal-600 font-bold flex-shrink-0">→</span><span><strong>Budget ($20–35):</strong> ComfiLife or LoveHome. Both have high-density foam that outlasts cheaper alternatives. The gap in performance vs. premium options is smaller than the price gap.</span></li>
+              <li className="flex items-start gap-2"><span className="text-teal-600 font-bold flex-shrink-0">→</span><span><strong>Mid-range ($35–60):</strong> Relax Support RS1 or Cushion Lab. Worth the premium if you sit 8+ hours daily or have significant back pain.</span></li>
+              <li className="flex items-start gap-2"><span className="text-teal-600 font-bold flex-shrink-0">→</span><span><strong>Premium ($60+):</strong> Tempur-Pedic. Only justified for chronic pain sufferers who have tried mid-range options and need TEMPUR material&apos;s unique pressure-distribution properties.</span></li>
+              <li className="flex items-start gap-2"><span className="text-teal-600 font-bold flex-shrink-0">→</span><span><strong>For car use:</strong> Sabar or Samsonite — both engineered for vehicle seat geometry rather than office chairs.</span></li>
+              <li className="flex items-start gap-2"><span className="text-teal-600 font-bold flex-shrink-0">→</span><span><strong>For travel:</strong> TravelRest inflatable — the only option that packs flat and works on airplane seats.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Related reading */}
+      <section className="section-padding bg-white border-t border-navy-100">
+        <div className="container-custom max-w-4xl">
+          <h2 className="font-serif text-2xl font-bold text-navy-900 mb-6">Related Guides</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { href: "/blog/best-sitting-positions-lower-back-pain", title: "Best Sitting Positions for Lower Back Pain" },
+              { href: "/blog/office-chair-vs-lumbar-cushion", title: "Office Chair vs. Lumbar Cushion: What Actually Works?" },
+              { href: "/blog/how-to-sit-with-lumbar-support", title: "How to Position Lumbar Support Correctly" },
+            ].map((link) => (
+              <a key={link.href} href={link.href} className="block p-4 rounded-xl border border-navy-100 hover:border-teal-300 hover:bg-teal-50 transition-colors">
+                <p className="text-sm font-semibold text-navy-800">{link.title}</p>
+                <p className="text-xs text-teal-600 mt-1">Read guide →</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
