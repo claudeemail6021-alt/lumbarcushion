@@ -19,6 +19,7 @@ const blogSlugs = [
   "physical-therapist-recommended-lumbar-support",
   "best-sitting-positions-lower-back-pain",
   "office-chair-vs-lumbar-cushion",
+    "best-lumbar-support-gifts-2026",
 ];
 
 const staticBlogSlugs = [
