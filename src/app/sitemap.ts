@@ -20,6 +20,7 @@ const blogSlugs = [
   "best-sitting-positions-lower-back-pain",
   "office-chair-vs-lumbar-cushion",
     "best-lumbar-support-gifts-2026",
+    "best-lumbar-support-gifts-2026",
 ];
 
 const staticBlogSlugs = [
