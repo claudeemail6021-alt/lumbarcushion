@@ -19,7 +19,7 @@ const steps = [
     num: "02",
     title: "Lumbar Support Design Analysis",
     content:
-      "Our kinesiologist and physical therapist evaluate the lumbar support geometry in detail: lumbar curve apex height (should align with L3–L5 for most adults), curve depth (too shallow provides no support; too deep creates discomfort), and firmness relative to the target user. Adjustable designs are reviewed across multiple settings. Products claiming lumbar support without meaningful curve geometry are flagged.",
+      "We evaluate the lumbar support geometry in detail against published ergonomics research: lumbar curve apex height (should align with L3–L5 for most adults), curve depth (too shallow provides no support; too deep creates discomfort), and firmness relative to the target user. Adjustable designs are reviewed across multiple settings. Products claiming lumbar support without meaningful curve geometry are flagged.",
   },
   {
     num: "03",
