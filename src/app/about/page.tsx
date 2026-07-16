@@ -1,103 +1,46 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ShieldCheck, BookOpen, Award, Heart, Search, BarChart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About LumbarCushion.com — Our Team & Review Standards",
-  description:
-    "Meet the team behind LumbarCushion.com. Ergonomists, physical therapists, and spine health writers reviewing lumbar support cushions for back pain relief.",
-  alternates: { canonical: "/about" },
+  title: "About LumbarCushion.com — Our Mission & Review Process",
+  description: "LumbarCushion.com independently researches lumbar support products using published spine health research, ergonomics science, and verified long-term user outcomes. Learn about our review standards.",
+  alternates: { canonical: "https://lumbarcushion.com/about" },
 };
-
-const team = [
-  {
-    initials: "DS",
-    color: "bg-indigo-100 text-indigo-700",
-    name: "Dr. Paul Sato",
-    title: "Contributing Ergonomics & Spine Consultant",
-    credentials: "PhD Kinesiology; Certified Professional Ergonomist (CPE)",
-    bio: "Dr. Sato spent 12 years as an occupational ergonomist before shifting to research and consulting. He reviews LumbarCushion.com's product evaluations specifically for lumbar biomechanics — assessing whether lumbar curve support, seat-to-back angle, and foam density claims translate to actual spinal decompression and posture improvement in extended sitting.",
-  },
-  {
-    initials: "LN",
-    color: "bg-green-100 text-green-700",
-    name: "Lauren Nash",
-    title: "Lead Product Reviewer",
-    credentials: "DPT, Orthopaedic Certified Specialist (OCS)",
-    bio: "Lauren is a licensed physical therapist who works primarily with patients recovering from lumbar disc injuries and chronic lower back pain. She applies her clinical background to evaluate whether lumbar cushion designs — firmness, height, curve depth, and attachment systems — actually support healthy sitting posture for people with lower back conditions.",
-  },
-  {
-    initials: "CW",
-    color: "bg-amber-100 text-amber-700",
-    name: "Chris Wallace",
-    title: "Senior Editor",
-    credentials: "Former Editor, Spine-Health.com; 12 years spine health journalism",
-    bio: "Chris has spent over a decade writing about spine health, back pain management, and ergonomic products for major health publications. He manages editorial quality at LumbarCushion.com — ensuring product explanations are technically accurate, written in plain language, and genuinely useful for people making purchase decisions.",
-  },
-  {
-    initials: "MO",
-    color: "bg-rose-100 text-rose-700",
-    name: "Maria Ochoa",
-    title: "User Research Analyst",
-    credentials: "MS Public Health, University of Michigan",
-    bio: "Maria oversees our consumer review analysis — systematically reviewing thousands of verified purchase reports to surface patterns in relief effectiveness, durability over time, and fit across different body types and chair configurations. Her public health background helps ensure our analysis captures real-world population-level outcomes rather than cherry-picked testimonials.",
-  },
-];
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-50 to-white py-14">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">About LumbarCushion.com</h1>
-          <p className="text-lg text-gray-600">
-            Independent lumbar support cushion reviews from kinesiologists, physical therapists,
-            and experienced spine health writers — focused on what actually relieves lower back
-            pain versus what just looks ergonomic.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Independent lumbar support product research — grounded in published spine health science and long-term real-world outcomes.
           </p>
         </div>
       </section>
 
       <div className="max-w-3xl mx-auto px-6 py-12 space-y-12">
-        {/* Mission */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why We Built This</h2>
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
-              The lumbar cushion market is full of products making vague ergonomic claims. "Lumbar
-              support" and "posture correction" are applied to products ranging from truly effective
-              orthopedic aids to foam pieces that flatten within weeks.
+              Lumbar support is a specific ergonomic intervention targeting the L4–L5 region of the lumbar spine. A lumbar cushion positioned at mid-back provides no lumbar support. Foam that compresses flat within 90 days provides no structural support. Yet most lumbar support marketing ignores both of these realities.
             </p>
             <p>
-              LumbarCushion.com was built to give people with lower back pain a reliable,
-              clinician-reviewed guide to the products that{" "}
-              <strong>actually deliver lumbar support</strong> — with enough detail about materials,
-              design, and fit to match the right cushion to your specific situation.
+              LumbarCushion.com evaluates lumbar support products against what published ergonomics and spine health research actually says about effective lumbar support. We are an independent editorial and research site, not affiliated with any cushion manufacturer or brand.
             </p>
           </div>
         </section>
 
-        {/* Review process */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Review Products</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Review Methodology</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              {
-                title: "Lumbar Support Design",
-                desc: "We assess curve height, depth, and firmness relative to lumbar anatomy. A lumbar cushion that positions support at T12 rather than L3–L5 does nothing for most lower back pain sufferers.",
-              },
-              {
-                title: "Ergonomics Review",
-                desc: "Our CPE consultant evaluates seat pan design, attachment system reliability, and whether the product integrates with standard office chairs without creating compensatory posture problems.",
-              },
-              {
-                title: "Materials Durability",
-                desc: "We analyze foam density ratings (ILD) and long-term compression resistance. Flat foam is useless foam. We specifically look for durability data in long-term verified reviews.",
-              },
-              {
-                title: "Back Pain User Outcomes",
-                desc: "We filter reviews for lower back pain, disc injury, and lumbar condition mentions to understand real-world effectiveness for the specific population LumbarCushion.com serves.",
-              },
+              { title: "Lumbar Biomechanics", desc: "We assess cushion height, curve depth, and firmness against published research on L4–L5 support, lumbar lordosis maintenance, and seated posture. Height must align with the individual's lumbar curve — cushions are evaluated for how they address this variability." },
+              { title: "Foam Density & Durability", desc: "Foam density (lbs/ft³) is the single best predictor of how long a lumbar cushion maintains its shape under daily use. We analyze specifications and verify against long-term user reports. A cushion that flattens within months is not a lumbar support." },
+              { title: "Attachment System", desc: "A lumbar cushion that slides out of position provides no consistent benefit. We evaluate strap geometry, anti-slip surfaces, and positional stability across different chair types including office chairs, car seats, and gaming chairs." },
+              { title: "User Outcome Analysis", desc: "We synthesize verified purchase reviews from users who explicitly describe lower back conditions and report on outcomes after 3+ months of consistent daily use — the minimum timeframe for meaningful evaluation." },
             ].map((item) => (
               <div key={item.title} className="bg-indigo-50 rounded-xl p-5">
                 <h3 className="font-semibold text-gray-900 mb-2 text-sm">{item.title}</h3>
@@ -112,61 +55,47 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Team */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Meet the Team</h2>
-          <div className="space-y-5">
-            {team.map((member) => (
-              <div key={member.name} className="flex gap-4 p-5 bg-gray-50 rounded-xl items-start">
-                <div
-                  className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 ${member.color}`}
-                >
-                  {member.initials}
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Research Sources</h2>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+            <li>Published research on lumbar support, seating ergonomics, and disc biomechanics from journals including Spine, Ergonomics, and Applied Ergonomics</li>
+            <li>Occupational health guidelines from NIOSH, OSHA, and published ergonomics standards</li>
+            <li>Materials science data on polyurethane foam density, compression characteristics, and durability</li>
+            <li>Manufacturer product specifications and materials certifications</li>
+            <li>Long-term verified user reviews with emphasis on 3+ month use periods from users with documented lower back conditions</li>
+          </ul>
+        </section>
+
+        <section>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { icon: ShieldCheck, title: "Research-Grounded", desc: "Product evaluations are based on published spine health and ergonomics research, not manufacturer marketing claims." },
+              { icon: Search, title: "Independent", desc: "We are not affiliated with any cushion brand. No manufacturer can pay to improve their ranking." },
+              { icon: Award, title: "No Paid Placements", desc: "Rankings reflect product performance and evidence only — never advertising budgets or commission rates." },
+              { icon: Heart, title: "Reader-Funded", desc: "Affiliate commissions from purchases are our only revenue. We recommend products we would buy for people we know." },
+              { icon: BookOpen, title: "Transparent Methodology", desc: "Our full evaluation criteria are published. You can judge our methods, not just our conclusions." },
+              { icon: BarChart, title: "Durability Focus", desc: "A lumbar cushion that flattens in 90 days is useless. We weight long-term durability data heavily in all rankings." },
+            ].map((item) => (
+              <div key={item.title} className="p-5 bg-indigo-50 rounded-xl flex gap-3">
+                <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                  <item.icon className="h-5 w-5 text-indigo-600" />
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900 text-sm">{member.name}</p>
-                  <p className="text-xs text-indigo-600 font-semibold mb-0.5">{member.title}</p>
-                  <p className="text-xs text-gray-400 italic mb-2">{member.credentials}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{member.bio}</p>
+                  <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Independence */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Editorial Independence</h2>
-          <div className="space-y-3 text-gray-700 leading-relaxed">
-            <p>
-              LumbarCushion.com earns revenue through Amazon affiliate commissions. When you
-              purchase a product through our links, we earn a small commission at no extra cost to
-              you.
-            </p>
-            <p>
-              <strong>This never influences our rankings.</strong> Products are scored on their
-              merits alone. We have recommended lower-commission products over higher-commission
-              ones when the clinical and user evidence supported it. We have never accepted payment
-              for inclusion, exclusion, or a favorable review.
-            </p>
-          </div>
-        </section>
-
-        {/* Disclaimer */}
         <section className="border-t border-gray-200 pt-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Medical Disclaimer</h2>
           <p className="text-sm text-gray-500 leading-relaxed">
-            Content on LumbarCushion.com is for informational purposes only and does not
-            constitute medical advice. Lower back pain has many potential causes, some of which
-            require professional evaluation and treatment. If you are experiencing severe,
-            worsening, or radiating pain, please consult a qualified healthcare provider. A lumbar
-            cushion is a postural support aid — it is not a substitute for diagnosis or treatment.
+            Content on LumbarCushion.com is for informational purposes only and does not constitute medical advice. Lower back pain has multiple potential causes. If you have chronic, worsening, or acute lower back pain, consult a qualified healthcare provider before relying on a lumbar cushion as your primary intervention.
           </p>
-          <p className="mt-4 text-sm text-gray-500">
-            Questions?{" "}
-            <Link href="/contact" className="text-indigo-600 hover:text-indigo-700">
-              Contact our editorial team
-            </Link>
+          <p className="mt-3 text-sm text-gray-500">
+            Questions or corrections? <Link href="/contact" className="text-indigo-600 hover:text-indigo-700">Contact us</Link>
           </p>
         </section>
       </div>
