@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our Review Methodology — How LumbarCushion.com Evaluates Products",
   description:
-    "Every product on LumbarCushion.com is evaluated by kinesiologists and physical therapists using a consistent, transparent process. Here is exactly how we score lumbar cushions.",
+    "Every product on LumbarCushion.com is evaluated using a consistent, transparent research process grounded in published spine health and ergonomics science. Here is exactly how we score lumbar cushions.",
   alternates: { canonical: "/methodology" },
 };
 
