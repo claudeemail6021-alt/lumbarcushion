@@ -49,9 +49,6 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="mt-4">
-            <Link href="/methodology" className="text-sm text-indigo-600 font-semibold hover:text-indigo-700">
-              Read our full review methodology →
-            </Link>
           </div>
         </section>
 
