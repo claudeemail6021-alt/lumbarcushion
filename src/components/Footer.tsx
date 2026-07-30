@@ -36,7 +36,6 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-              <li><Link href="/methodology" className="hover:text-white">Our Methodology</Link></li>
               <li><Link href="/affiliate-disclosure" className="hover:text-white">Affiliate Disclosure</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white">Terms of Use</Link></li>
@@ -55,7 +54,6 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="https://sciaticacushions.com" target="_blank" rel="noopener" className="text-slate-500 hover:text-indigo-600 transition-colors">SciaticaCushions.com — Sciatica Product Reviews</a></li>
               <li><a href="https://gelcushions.com" target="_blank" rel="noopener" className="text-slate-500 hover:text-indigo-600 transition-colors">GelCushions.com — Gel Seat & Knee Cushion Reviews</a></li>
-              <li><a href="/methodology" className="text-slate-500 hover:text-indigo-600 transition-colors">Our Review Methodology</a></li>
               <li><a href="/affiliate-disclosure" className="text-slate-500 hover:text-indigo-600 transition-colors">Affiliate Disclosure</a></li>
             </ul>
           </div>
