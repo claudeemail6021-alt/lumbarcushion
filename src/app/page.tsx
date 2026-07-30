@@ -22,7 +22,7 @@ const jsonLd = {
 
 const trustBadges = [
   { icon: Shield, label: "Ergonomist-Backed", desc: "Reviews informed by ergonomics research and physical therapy guidelines" },
-  { icon: Award, label: "Independently Tested", desc: "No brand sponsorships — only honest rankings based on real performance" },
+  { icon: Award, label: "Independently Researched", desc: "No brand sponsorships — only honest rankings based on real performance" },
   { icon: Armchair, label: "All-Use Coverage", desc: "We cover office, car, and travel — finding the best cushion for every situation" },
   { icon: BookOpen, label: "Evidence-Based", desc: "Back pain guidance grounded in peer-reviewed biomechanics research" },
 ];
