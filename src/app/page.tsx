@@ -9,8 +9,8 @@ import BlogCard from "@/components/BlogCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
-  title: "Best Lumbar Support Cushions 2026 — Expert Reviews | LumbarCushion",
-  description: "We test and rank the best lumbar support cushions for office chairs, car seats, and travel. End lower back pain with the right support.",
+  title: "Lumbar Support Cushions 2026 — Compare Popular Options | LumbarCushion",
+  description: "Browse and compare popular lumbar support cushions for office chairs, car seats, and travel. Product information and comparisons.",
   alternates: { canonical: "https://lumbarcushion.com" },
 };
 
@@ -50,7 +50,7 @@ export default async function HomePage() {
             End Back Pain.<br /><span className="text-teal-500">Find Your Perfect Support.</span>
           </h1>
           <p className="text-lg text-navy-600 max-w-2xl mx-auto leading-relaxed mb-10">
-            We independently research and rank the best lumbar support cushions for office chairs, car seats, and travel. Research-based recommendations to help you sit pain-free.
+            Browse and compare popular lumbar support cushions for office chairs, car seats, and travel. Find highly-rated options to help you sit pain-free.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/top-10" className="px-8 py-3.5 bg-navy-700 text-white font-bold rounded-full hover:bg-navy-800 transition-colors shadow-md">See Our Top 10 Picks →</Link>
