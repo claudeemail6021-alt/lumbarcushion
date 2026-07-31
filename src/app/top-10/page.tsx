@@ -8,7 +8,7 @@ import { amazonLink } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "10 Best Lumbar Support Cushions of 2026 (Office, Car & Travel)",
-  description: "Expert-ranked top 10 lumbar support cushions for 2026. Tested for back pain relief, durability, and real-world use in office chairs, cars, and travel.",
+  description: "Compare popular lumbar support cushions for 2026. Browse highly-rated options for real-world use in office chairs, cars, and travel.",
   alternates: { canonical: "https://lumbarcushion.com/top-10" },
 };
 
