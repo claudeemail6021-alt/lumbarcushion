@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { ChevronRight, Calendar, Clock, User } from "lucide-react";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/mdx";
 import { formatDate } from "@/lib/utils";
+import AdUnit from "@/components/AdUnit";
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -85,6 +86,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <article className="prose">
             <MDXRemote source={post.content} />
           </article>
+
+          <AdUnit slot="8199600350" className="mt-8" />
           <div className="mt-12 pt-8 border-t border-navy-100">
             <Link href="/blog" className="text-teal-600 font-semibold hover:text-teal-700">← Back to all articles</Link>
           </div>
