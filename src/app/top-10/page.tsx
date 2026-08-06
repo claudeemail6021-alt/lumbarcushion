@@ -1,3 +1,4 @@
+import AdUnit from "@/components/AdUnit";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink, Check, X } from "lucide-react";
@@ -85,6 +86,8 @@ export default function Top10Page() {
         </div>
       </section>
 
+
+      <div className="container-custom max-w-4xl py-2"><AdUnit slot="8199600350" /></div>
       {/* Buying Guide */}
       <section className="section-padding bg-navy-50">
         <div className="container-custom max-w-4xl">
