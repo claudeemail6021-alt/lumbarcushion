@@ -57,8 +57,8 @@ export default async function HomePage() {
             <Link href="/blog/lumbar-support-guide" className="px-8 py-3.5 bg-white text-navy-700 font-semibold rounded-full border border-navy-200 hover:border-teal-300 transition-colors">What Causes Back Pain? →</Link>
           </div>
           <div className="mt-8 flex items-center justify-center gap-6 text-sm text-navy-500">
-            <span>✓ 8 cushions tested</span>
             <span>✓ Office, car & travel</span>
+            <span>✓ Research-based information</span>
             <span>✓ No paid placements</span>
           </div>
         </div>
