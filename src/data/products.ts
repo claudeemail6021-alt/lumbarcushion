@@ -21,6 +21,7 @@ export interface Product {
   faq: { question: string; answer: string }[];
   rank: number;
   featured?: boolean;
+  imageUrl: string;
 }
 
 const products: Product[] = [
@@ -54,6 +55,7 @@ const products: Product[] = [
       { question: "Does it work in a car?", answer: "Yes. The adjustable strap works well on car seats and the cushion's size fits most vehicles. Particularly helpful for long drives." },
       { question: "How long does the memory foam last?", answer: "High-density memory foam typically retains its shape for 3–5 years with daily use. The ComfiLife foam is 45D density, which is on the durable end of the spectrum." },
     ],
+    imageUrl: "",
     rank: 1,
     featured: true,
   },
@@ -85,6 +87,7 @@ const products: Product[] = [
       { question: "How firm is this compared to the ComfiLife?", answer: "Noticeably firmer. LoveHome prioritizes structural support over plush comfort. If you found the ComfiLife too soft, this is likely a better fit." },
       { question: "Is it good for pregnancy back pain?", answer: "Many pregnant users report it helpful for lumbar support during desk work. The firm support can relieve the lower back strain caused by shifting center of gravity." },
     ],
+    imageUrl: "",
     rank: 2,
     featured: true,
   },
@@ -114,6 +117,7 @@ const products: Product[] = [
     faq: [
       { question: "Is this good for gaming chairs?", answer: "Yes — the extended height works especially well with gaming chairs, which typically have high, flat backs that offer little lumbar curve." },
     ],
+    imageUrl: "",
     rank: 3,
     featured: true,
   },
@@ -143,6 +147,7 @@ const products: Product[] = [
     faq: [
       { question: "What makes dual-density worth the extra cost?", answer: "Single-density foam forces a compromise between softness and support. Dual-density gives you immediate surface comfort while the firm core prevents your back from sinking through the cushion over hours of use." },
     ],
+    imageUrl: "",
     rank: 4,
   },
   {
@@ -171,6 +176,7 @@ const products: Product[] = [
     faq: [
       { question: "Does it work in a truck?", answer: "Yes — the car-specific design works well in trucks, SUVs, and vans. The strap system accommodates larger seat backs common in trucks." },
     ],
+    imageUrl: "",
     rank: 5,
   },
   {
@@ -199,6 +205,7 @@ const products: Product[] = [
     faq: [
       { question: "Does it work on economy class airline seats?", answer: "Yes — designed specifically for economy class seats, where lumbar support is minimal and the tray table attachment is the most reliable anchor point." },
     ],
+    imageUrl: "",
     rank: 6,
   },
   {
@@ -227,6 +234,7 @@ const products: Product[] = [
     faq: [
       { question: "Why do physical therapists recommend this over other cushions?", answer: "The cylindrical shape provides precise, consistent lumbar support without the risk of over-correcting the curve, which some contoured cushions can do if positioned incorrectly." },
     ],
+    imageUrl: "",
     rank: 7,
   },
   {
@@ -255,6 +263,7 @@ const products: Product[] = [
     faq: [
       { question: "Is Tempur-Pedic worth the premium over regular memory foam?", answer: "For chronic pain sufferers, yes — the pressure distribution is noticeably superior. For mild discomfort, the ComfiLife or Everlasting Comfort at a third of the price will likely suffice." },
     ],
+    imageUrl: "",
     rank: 8,
   },
   {
@@ -284,6 +293,7 @@ const products: Product[] = [
       { question: "How does this compare to the ComfiLife?", answer: "The Cushion Lab is firmer and more specifically contoured for the lower lumbar. It suits those who found the ComfiLife too soft or insufficiently targeted. For most general users, the ComfiLife at $30 provides excellent value; upgrade to Cushion Lab if you need more firmness and precision." },
       { question: "Does the non-slip strap work on mesh chairs?", answer: "Yes — the integrated strap is designed to work on both fabric and mesh chair backs, which some single-strap designs struggle with." },
     ],
+    imageUrl: "",
     rank: 9,
     featured: true,
   },
@@ -313,6 +323,7 @@ const products: Product[] = [
     faq: [
       { question: "How does it compare to dedicated car lumbar cushions?", answer: "It works in cars but is less specialized than the Sabar car lumbar. Samsonite's advantage is dual-use — one cushion for office and car, versus buying two specialized options." },
     ],
+    imageUrl: "",
     rank: 10,
   },
   {
@@ -343,6 +354,7 @@ const products: Product[] = [
       { question: "Does it fit gaming chairs?", answer: "Yes — the dual-strap design is specifically built to accommodate the taller, curved backs common on gaming chairs, in addition to standard office chairs and car seats." },
       { question: "Will the foam soften over time?", answer: "High-density memory foam like this is designed to resist permanent compression better than lower-density foam, though all foam gradually softens with years of daily use." },
     ],
+    imageUrl: "",
     rank: 11,
   },
   {
@@ -373,6 +385,7 @@ const products: Product[] = [
       { question: "Is this actually designed for gaming chairs?", answer: "Yes — the manufacturer specifically markets this for gaming chair compatibility in addition to office and car use, with strap length designed around common gaming chair backrest dimensions." },
       { question: "Does the cover come off for washing?", answer: "Yes, the mesh and velvet cover unzips and is machine washable — hand washing is recommended to preserve the velvet texture longer." },
     ],
+    imageUrl: "",
     rank: 12,
   },
   {
@@ -403,6 +416,7 @@ const products: Product[] = [
       { question: "What does 'patented bulge' actually mean?", answer: "AUVON states the raised central bulge shape and its placement are protected by a design patent, and that the shape and positioning were developed in consultation with physical therapists — this is the manufacturer's claim about their product design process." },
       { question: "Is this suitable for tall or larger individuals?", answer: "The manufacturer specifies it's designed for individuals in the 100–200 lb range; those outside this range may find the fit less precise." },
     ],
+    imageUrl: "",
     rank: 13,
   },
   {
@@ -433,6 +447,7 @@ const products: Product[] = [
       { question: "Will this work on a regular office chair?", answer: "It's sized for recliners and larger seating — at 20x16.5x5 inches it will likely feel oversized on a standard office chair. For office use, a dedicated office lumbar pillow with mounting straps is a better fit." },
       { question: "Does the gel layer actually feel cooler?", answer: "Gel-infused foam conducts heat away from the contact surface more effectively than standard memory foam, which is why it's commonly used in cushions intended for extended sitting sessions." },
     ],
+    imageUrl: "",
     rank: 14,
   },
   {
@@ -463,6 +478,7 @@ const products: Product[] = [
       { question: "Can this be used on a regular office chair?", answer: "Yes, the adjustable strap system is designed to also work on recliners and some office chairs, though it was purpose-built with wheelchair frames in mind." },
       { question: "Is the cover washable?", answer: "Yes, the knit fabric cover is designed to be removable for washing." },
     ],
+    imageUrl: "",
     rank: 15,
   },
   {
@@ -493,6 +509,7 @@ const products: Product[] = [
       { question: "How is this different from a foam lumbar pillow?", answer: "Foam pillows have one fixed firmness level built into the material. This cushion lets you adjust firmness on demand by adding or releasing air, and it packs completely flat when deflated — useful for travel in a way foam cannot match." },
       { question: "Is it durable for regular use?", answer: "The exterior is built from tear-resistant polyester designed for repeated inflation and deflation cycles, though as with any inflatable product, valve seals are the most common wear point over years of heavy use." },
     ],
+    imageUrl: "",
     rank: 16,
   },
 ];
