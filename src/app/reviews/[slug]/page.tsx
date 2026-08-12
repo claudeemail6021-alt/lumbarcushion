@@ -44,6 +44,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     itemReviewed: {
       "@type": "Product",
       name: p.name,
+      image: p.imageUrl,
       brand: { "@type": "Brand", name: p.brand },
       offers: {
         "@type": "Offer",
@@ -103,6 +104,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {p.name} Review (2026)
             </h1>
             <p className="text-lg text-navy-600 leading-relaxed mb-6">{p.shortDescription}</p>
+
+            {p.imageUrl && (
+              <div className="mb-6 bg-navy-50 rounded-2xl border border-navy-100 p-4 max-w-xs">
+                <img src={p.imageUrl} alt={p.name} className="w-full h-auto object-contain" />
+              </div>
+            )}
 
             <div className="flex flex-wrap items-center gap-6 mb-6">
               <div className="flex items-center gap-2">
