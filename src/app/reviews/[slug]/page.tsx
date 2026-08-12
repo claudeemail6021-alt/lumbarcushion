@@ -263,7 +263,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               Ready to Try the {p.brand} {p.name.split(" ").slice(-2).join(" ")}?
             </h2>
             <p className="text-navy-600 mb-6">
-              Ranked <strong>#{p.rank}</strong> in our expert lumbar support review. {p.price} — {p.priceRange} category.
+              Ranked <strong>#{p.rank}</strong> in our lumbar support comparisons. {p.price} — {p.priceRange} category.
             </p>
             <a
               href={`https://www.amazon.com/dp/${p.asin}?tag=asotv068-20`}
