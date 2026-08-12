@@ -71,6 +71,9 @@ export default function Top10Page() {
                       </div>
                     </div>
                     <div className="md:w-48 flex flex-col gap-3">
+                      {p.imageUrl && (
+                        <img src={p.imageUrl} alt={p.name} className="w-full h-32 object-contain rounded-lg bg-navy-50 p-2" />
+                      )}
                       <Link href={`/reviews/${p.slug}`} className="block text-center px-4 py-2.5 border-2 border-navy-600 text-navy-600 font-semibold rounded-full hover:bg-navy-50 transition-colors text-sm">Full Review</Link>
                       <a href={amazonLink(p.asin)} target="_blank" rel="noopener noreferrer nofollow"
                         className="flex items-center justify-center gap-2 px-4 py-2.5 bg-navy-700 text-white font-bold rounded-full hover:bg-navy-800 transition-colors text-sm">
