@@ -131,11 +131,11 @@ const products: Product[] = [
     priceRange: "Mid-Range",
     rating: 4.4,
     reviewCount: 9500,
-    shortDescription: "The physical therapist's favorite — a classic lumbar roll used in clinics worldwide. Simple, effective, and backed by decades of clinical use for lumbar support.",
+    shortDescription: "A classic lumbar roll built around the McKenzie method — widely used in physical therapy clinics for its simple, precise cylindrical design.",
     cushionType: "Lumbar Roll",
     material: "Foam Roll",
     bestFor: ["Office Chair", "Physical Therapy", "Home Chair", "Car"],
-    pros: ["Recommended by physical therapists", "Classic, clinically-proven design", "Durable foam that holds shape for years", "Affordable and portable", "Easy to position and adjust"],
+    pros: ["Design based on the widely-used McKenzie method", "Simple, time-tested cylindrical shape", "Durable foam that holds shape for years", "Affordable and portable", "Easy to position and adjust"],
     cons: ["No strap — must be held by chair back pressure", "Less convenient than cushions with straps", "Minimal padding for those wanting plush comfort"],
     featureBreakdown: {
       "Clinical Design": "McKenzie lumbar rolls have been used in physical therapy practices for over 40 years. The cylindrical shape precisely fills the lumbar lordosis gap without over-correcting.",
@@ -145,7 +145,7 @@ const products: Product[] = [
     notFor: "Those who need a cushion that stays in place via strap — the roll works best pressed between your back and a firm chair back.",
     howToUse: "Place the roll horizontally across the chair back at your lumbar region. Sit back firmly so your body weight holds it in position. No strap is needed when used correctly with a firm chair back.",
     faq: [
-      { question: "Why do physical therapists recommend this over other cushions?", answer: "The cylindrical shape provides precise, consistent lumbar support without the risk of over-correcting the curve, which some contoured cushions can do if positioned incorrectly." },
+      { question: "What makes the McKenzie roll design different from other lumbar cushions?", answer: "The cylindrical shape provides precise, consistent lumbar support without the risk of over-correcting the curve, which some contoured cushions can do if positioned incorrectly. It's built around the McKenzie method, a well-established physical therapy approach to spinal positioning." },
     ],
     imageUrl: "https://m.media-amazon.com/images/I/71C3yhbfCiL._AC_SX679_.jpg",
     rank: 4,
